@@ -1,8 +1,30 @@
 :root {
 }
 
+* {
+    margin: 0;
+}
+
 #bubbleChartSvg {
     width: 980px;
     max-width: 100%;
     height: auto;
+}
+
+#world_map_chart {
+}
+
+#animated_line_chart_indicators {
+    height: 450px;
+    width: 650px;
+}
+
+#plot_chart {
+    height: 450px;
+    width: 650px;
+}
+
+#animated_line_chart_continents {
+    width: 650px;
+    height: 450px;
 }

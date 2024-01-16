@@ -1,5 +1,5 @@
-import {buildData, findValueByYear} from "../typescript/functions.js";
-
+import {buildData} from "../typescript/functions.js";
+import {getCountryDataByYear} from "../typescript/get-country-data-by-year.js";
 
 let year = 2021;
 let bubbleChartData;
@@ -14,20 +14,13 @@ function updateChart() {
 
 function updateChartData() {
     bubbleChartData = ((data, year) => {
-        let resultData = [];
-        for (const country of data) {
-            const {id, countryName, ...rest} = country;
-
-            if (rest.birthData !== undefined) {
-                resultData.push({
-                    countryName: countryName,
-                    birthRate: findValueByYear(rest.birthData, year),
-                })
-            }
-        }
-        return resultData.sort((a, b) => {
-            return a.birthRate - b.birthRate
-        }).splice(0, 10).concat(resultData.splice(-10));
+        let resultData = getCountryDataByYear(data, year);
+        return resultData
+            .filter((value) => value !== undefined)
+            .sort((a, b) => {
+                return a.birthRate - b.birthRate
+            })
+            .splice(0, 10).concat(resultData.splice(-10));
     })(buildData, year);
 }
 
@@ -80,7 +73,6 @@ node.append("circle")
     .attr("fill-opacity", 0.8)
     .attr("fill", d => color(group(d.data)))
     .attr("r", (d) => {
-        console.log(d);
         return d.r
     });
 

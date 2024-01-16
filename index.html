@@ -1,17 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!--Imports-->
-    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <!--Config-->
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <!--Style--->
+    <link href="styles.css" rel="stylesheet">
+
 </head>
 <body>
-<!--<div id="bubble_chart">-->
-<!--</div>-->
+<!--<div id="bubble_chart"></div>-->
+<!--<div id="animated_line_chart_indicators"></div>-->
+<div id="animated_line_chart_continents"></div>
+<!--<div id="world_map_chart"></div>-->
+<!--<div id="plot_chart"></div>-->
+
+<!--Scripts-->
+<!--Externals-->
+<script src="https://cdn.jsdelivr.net/npm/echarts@latest/dist/echarts.min.js"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.js"></script>
+
+
+<!--Charts-->
+<!--<script src="./charts/world_map_chart.js" type="module"></script>-->
+<script src="charts/animated_line_chart.js" type="module"></script>
 <!--<script src="charts/bubble_chart.js" type="module"></script>-->
-<div id="world_map_chart"></div>
-<script src="charts/world_map_chart.js" type="module"></script>
+<!--<script src="charts/plot_chart.js" type="module"></script>-->
+
+<!--Internals-->
+<script src="javascript/chart_caller.js" type="module"></script>
+<script src="./typescript/word_map_color.js" type="module"></script>
+<script src="typescript/get-country-data-by-year.js" type="module"></script>
 
 </body>
 </html>

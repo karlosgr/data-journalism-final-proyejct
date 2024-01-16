@@ -1,5 +1,11 @@
 {
   "regions": {
+    "CSS": {
+      "country_name": "Caribbean small states"
+    },
+    "AUS": {
+      "country_name": "Australia"
+    },
     "WLD": {
       "country_name": "World"
     },
@@ -52,13 +58,19 @@
       "country_name": "Latin America & the Caribbean (IDA & IBRD countries)"
     },
     "TSA": {
-      "country_name": "South Asia (IDA & IBRD)"
+      "country_name": "South Asia"
     },
     "TSS": {
       "country_name": "Sub-Saharan Africa (IDA & IBRD countries)"
     },
     "TMN": {
       "country_name": "Middle East & North Africa (IDA & IBRD countris)"
+    },
+    "CAN": {
+      "country_name": "Canada"
+    },
+    "USA": {
+      "country_name": "United States"
     }
   },
   "countries": {
@@ -200,9 +212,6 @@
     "CRI": {
       "country_name": "Costa Rica"
     },
-    "CSS": {
-      "country_name": "Caribbean small states"
-    },
     "CUB": {
       "country_name": "Cuba"
     },
@@ -241,9 +250,6 @@
     },
     "EGY": {
       "country_name": "Egypt."
-    },
-    "EMU": {
-      "country_name": "Euro area"
     },
     "ERI": {
       "country_name": "Eritrea"
@@ -667,9 +673,6 @@
     },
     "UKR": {
       "country_name": "Ukraine"
-    },
-    "UMC": {
-      "country_name": "Upper middle income"
     },
     "URY": {
       "country_name": "Uruguay"

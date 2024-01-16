@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@types/color": "^3.0.6",
+    "color": "^4.2.3",
+    "echarts-stat": "^1.2.0"
+  },
+  "type": "module"
+}
