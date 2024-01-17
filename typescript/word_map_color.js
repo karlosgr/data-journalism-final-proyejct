@@ -1,5 +1,3 @@
-const maxGreen = 55;
-const minRed = 200;
 const bluePalette = [
     "rgb(166,225,250)",
     "rgb(14,107,168)",
@@ -8,11 +6,12 @@ const bluePalette = [
     "rgb(0,7,45)",
 ];
 const redPalette = [
-    "rgb(249,98,108)",
-    "rgb(247,28,52)",
-    // "rgb(217,8,22)",
-    "rgb(157,6,16)",
-    "rgb(98,4,10)",
+    "rgb(249, 128, 134)",
+    "rgb(255, 64, 64)",
+    "rgb(255, 0, 0)",
+    "rgb(213, 0, 0)",
+    "rgb(170, 0, 0)",
+    "rgb(128, 0, 0)",
 ];
 const purplePalette = [
     "rgb(189,78,249)",
@@ -25,6 +24,6 @@ export function getMapColor(value) {
     console.log(value);
     return value == 0 ? "rgb(255,255,255)" :
         (() => {
-            return value > 0 ? bluePalette[Math.round(value / 10)] : redPalette[Math.round(Math.abs(value) / 10)];
+            return value > 0 ? redPalette[Math.round(value / 10) - 1] : purplePalette[Math.round(Math.abs(value) / 10)];
         })();
 }

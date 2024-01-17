@@ -1,6 +1,4 @@
 export function plotAnimatedLineChart(animatedLineChartData) {
-    console.log(animatedLineChartData);
-
     run(animatedLineChartData.data,
         animatedLineChartData.lineDataNames,
         animatedLineChartData.title,

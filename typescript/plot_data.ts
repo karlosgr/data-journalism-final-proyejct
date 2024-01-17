@@ -54,7 +54,7 @@ const deleteDuplicatedRegionData = (regionData: any[]) => {
 }
 
 export const animatedLineChartIndicatorsData = {
-    title: 'World Populations Indicators',
+    title: "Indicadores de Natalidad y Mortalidad por cada 1000 personas",
     htmlElementId: document.getElementById('animated_line_chart_indicators'),
     lineDataNames: [
         "Birth Rate",

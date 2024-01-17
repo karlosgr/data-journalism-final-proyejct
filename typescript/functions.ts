@@ -1,5 +1,6 @@
 export type regionData = countryData;
 
+//Interfaces
 export interface dataByYear {
     year: number;
     value: number;
@@ -13,7 +14,6 @@ export interface countryData {
     populationData: dataByYear[];
 }
 
-
 export interface worldData {
     year: number,
     worldBirthRate: number,
@@ -22,6 +22,7 @@ export interface worldData {
 }
 
 
+//Functions
 export function findValueByYear(years: dataByYear[], year: number): number | undefined {
     if (years != undefined) {
         for (const date of years) {
@@ -30,7 +31,20 @@ export function findValueByYear(years: dataByYear[], year: number): number | und
     }
 }
 
+async function loadJson(jsonUrl: string): Promise<any> {
+    return await (await fetch(jsonUrl)).json()
+}
 
+export function numberOfCountriesWithBirthRateData(year: number): number {
+    return buildData.filter((value: countryData): boolean => findValueByYear(value.birthData, year) !== undefined).length;
+}
+
+export function numberOfCountriesWithMortalityData(year: number): number {
+    return buildData.filter((value: countryData): boolean => findValueByYear(value.mortalityData, year) !== undefined).length;
+}
+
+
+//Data
 const data: {
     countriesData: any
     birthData: any
@@ -44,20 +58,6 @@ const data: {
         countriesData: await loadJson("data/countries.json"),
     }
 })();
-
-
-async function loadJson(jsonUrl: string): Promise<any> {
-    return await (await fetch(jsonUrl)).json()
-}
-
-
-export function numberOfCountriesWithBirthRateData(year: number): number {
-    return buildData.filter((value: countryData): boolean => findValueByYear(value.birthData, year) !== undefined).length;
-}
-
-export function numberOfCountriesWithMortalityData(year: number): number {
-    return buildData.filter((value: countryData): boolean => findValueByYear(value.mortalityData, year) !== undefined).length;
-}
 
 
 export const buildData: countryData[] = ((): countryData[] => {

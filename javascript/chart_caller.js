@@ -1,4 +1,6 @@
-import {animatedLineChartContinentsData} from "../typescript/plot_data.js";
 import {plotAnimatedLineChart} from "../charts/animated_line_chart.js";
+import {animatedLineChartIndicatorsData} from "../typescript/plot_data.js";
 
-plotAnimatedLineChart(animatedLineChartContinentsData);
+plotAnimatedLineChart(animatedLineChartIndicatorsData);
+// plotAnimatedLineChart(animatedLineChartContinentsData);
+// plotMapChart(1960);

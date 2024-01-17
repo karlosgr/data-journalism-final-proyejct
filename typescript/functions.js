@@ -7,6 +7,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+//Functions
 export function findValueByYear(years, year) {
     if (years != undefined) {
         for (const date of years) {
@@ -15,14 +16,6 @@ export function findValueByYear(years, year) {
         }
     }
 }
-const data = await (() => __awaiter(void 0, void 0, void 0, function* () {
-    return {
-        birthData: yield loadJson("data/birth-rate-data.json"),
-        mortalityData: yield loadJson("data/mortality-rate-data.json"),
-        populationData: yield loadJson("data/population.json"),
-        countriesData: yield loadJson("data/countries.json"),
-    };
-}))();
 function loadJson(jsonUrl) {
     return __awaiter(this, void 0, void 0, function* () {
         return yield (yield fetch(jsonUrl)).json();
@@ -34,6 +27,15 @@ export function numberOfCountriesWithBirthRateData(year) {
 export function numberOfCountriesWithMortalityData(year) {
     return buildData.filter((value) => findValueByYear(value.mortalityData, year) !== undefined).length;
 }
+//Data
+const data = await (() => __awaiter(void 0, void 0, void 0, function* () {
+    return {
+        birthData: yield loadJson("data/birth-rate-data.json"),
+        mortalityData: yield loadJson("data/mortality-rate-data.json"),
+        populationData: yield loadJson("data/population.json"),
+        countriesData: yield loadJson("data/countries.json"),
+    };
+}))();
 export const buildData = (() => {
     let countryDataResult = [];
     for (const country in data.countriesData["countries"]) {

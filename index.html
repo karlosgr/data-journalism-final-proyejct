@@ -10,11 +10,110 @@
 
 </head>
 <body>
+<div class="pages main_page white_page">
+    <div class="title">
+        <h1 class="font_color_red gobold_b">
+            LA NATALIDAD,<br>
+            <span class="subtitle_main_page gobold">
+                UN PROBLEMA MUNDIAL
+            </span>
+        </h1>
+    </div>
+    <div id="title_image">
+        <img alt="down_arrow" src="assets/arrows.png">
+    </div>
+</div>
+
+<div class="pages white_page introduction_page">
+    <div class="plot_chart_container">
+        <div id="plot_chart"></div>
+        <h3 class="gobold_tl font_color_black">
+            CRECIMIENTO POBLACIONAL ANUAL ENTRE
+            <span class="year_range_plot_chart">
+                1961-2021
+            </span>
+        </h3>
+    </div>
+
+    <div class="introduction_page_texts">
+        <p class="font_color_red gobold introduction_page_title">
+            ALARMANTE DESCENSO<br> EN EL CRECIMIENTO<br> POBLACIONAL
+        </p>
+        <p class="sinkin regular_text">
+            Entre 1961 y hasta 1990 se evidencia en aumento significativo en los nacimientos. Sin embargo a partir de
+            1990 es notable una acelerada disminución del crecimiento poblacional.
+        </p>
+    </div>
+</div>
+
+<div class="pages white_page global_ind_page">
+    <div class="ind_page_text">
+        <p class="font_color_red gobold">
+            Y AUNQUE <br>
+            LA MORTALIDAD<br>
+            DISMINUYE
+        </p>
+        <p class="sinkin regular_text">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+            dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam
+        </p>
+    </div>
+    <div class="ind_page_chart">
+        <div id="animated_line_chart_indicators"></div>
+        <p class="font_color_red gobold">
+            LOS NACIMIENTOS<br>
+            TAMBIÉN, Y MUCHO...
+        </p>
+    </div>
+</div>
+
+<div class="pages child_per_woman_page red_page">
+    <p class="font_color_white gobold">
+        CANTIDAD DE HIJOS POR MUJER
+    </p>
+    <div>
+        <p class="year_big gobold_b"> 1960 </p>
+        <img alt="baby bottle" src="#">
+        <p class="sinkin"><span class="amount_child">5</span><br>HIJOS</p>
+    </div>
+    <div>
+        <p class="year_big gobold_b"> 2022 </p>
+        <img alt="baby bottle" src="#">
+        <p class="sinkin"><span class="amount_child">2.3</span><br>HIJOS</p>
+    </div>
+</div>
+
+<div class="pages causes_pages white_page">
+    <p>
+        CAUSAS DEL DECRECIMIENTO POBLACIONAL
+    </p>
+    <div class="causes_pages_content">
+        <div>
+            <img alt="condoms" src="#">
+            <p> MAYOR ACCESO A<br> EDUCACIÓN SEXUAL<br> Y MÉTODOS ANTICONCEPTIVOS</p>
+        </div>
+        <div>
+            <img alt="pork" src="#">
+            <p>SITUACIÓN ECONÓMICA</p>
+        </div>
+        <div>
+            <img alt="" src="#">
+            <p>MAYOR ACCESO A<br> EDUCACIÓN SEXUAL<br> Y METODOS ANTICONCEPTIVOS</p>
+        </div>
+    </div>
+</div>
+
+<div class="pages red_page continents_text_page">
+    <p class="font_color_white gobold_tl">
+        A PESAR DE QUE EXISTE<br> UNA<span>DISMINUCIÓN DE LA NATALIDAD<br> A NIVEL MUNDIAL,<br><span>NO</span> EN TODOS LOS CONTINENTES SE<br> COMPORTA DE LA MISMA MANERA</span>
+    </p>
+</div>
+
+
 <!--<div id="bubble_chart"></div>-->
-<!--<div id="animated_line_chart_indicators"></div>-->
-<div id="animated_line_chart_continents"></div>
+<!--<div id="animated_line_chart_continents"></div>-->
 <!--<div id="world_map_chart"></div>-->
-<!--<div id="plot_chart"></div>-->
+
 
 <!--Scripts-->
 <!--Externals-->
@@ -24,14 +123,14 @@
 
 
 <!--Charts-->
-<!--<script src="./charts/world_map_chart.js" type="module"></script>-->
 <script src="charts/animated_line_chart.js" type="module"></script>
-<!--<script src="charts/bubble_chart.js" type="module"></script>-->
-<!--<script src="charts/plot_chart.js" type="module"></script>-->
+<script src="charts/plot_chart.js" type="module"></script>
+<!--<script src="./charts/world_map_chart.js" type="module"></script>-->
+<!--<script src="charts/bubble_chart.js" type="module"></s9cript>-->
 
 <!--Internals-->
 <script src="javascript/chart_caller.js" type="module"></script>
-<script src="./typescript/word_map_color.js" type="module"></script>
+<!--<script src="./typescript/word_map_color.js" type="module"></script>-->
 <script src="typescript/get-country-data-by-year.js" type="module"></script>
 
 </body>

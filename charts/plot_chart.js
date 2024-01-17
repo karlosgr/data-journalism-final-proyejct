@@ -13,18 +13,20 @@ function fillData() {
     for (const data of worldDataByYears) {
         if (data.year !== 1960) {
             plotChartData.push({
-                side: pickSide(data.year),
+                side: _pickSide(data.year),
                 point: data.year,
                 years: data.year,
-                population: data.worldPopulation - worldDataByYears
-                    .find((value) => value.year === data.year - 1).worldPopulation ?? data.worldPopulation,
+                population: (data.worldPopulation - worldDataByYears
+                    .find((value) => value.year === data.year - 1).worldPopulation ?? data.worldPopulation) / 1000000,
             })
         }
     }
-
 }
 
-function pickSide(year) {
+function _pickSide(year) {
+    if ([1961, 1962, 1965, 1967, 1977, 1978, 1984, 2014, 2021, 2020, 2019, 2018, 2017].indexOf(year) !== -1) return "right";
+    if ([1963, 1964, 1966, 1968, 1969, 1970, 1971, 1973, 1979, 1980, 1981, 1982, 1983, 1985, 1986, 1987, 1988, 2012].indexOf(year) !== -1) return "left";
+    if ([1972, 1976, 1989, 1992, 1995, 1997, 1999, 2001, 2004, 2007, 2011, 2015].indexOf(year) !== -1) return "bottom";
     return "top";
 }
 
@@ -38,12 +40,12 @@ function plot() {
 function plotChart() {
 
     // Declare the chart dimensions and margins.
-    const width = 928;
-    const height = 720;
+    const width = `${window.innerWidth * 0.57}`;
+    const height = `${window.innerHeight * 0.82}`;
     const marginTop = 20;
     const marginRight = 30;
     const marginBottom = 30;
-    const marginLeft = 40;
+    const marginLeft = 50;
 
     // Declare the positional encodings.
     const x = d3.scaleLinear()
@@ -80,11 +82,11 @@ function plotChart() {
             .attr("font-weight", "bold")
             .attr("text-anchor", "end")
             .attr("fill", "currentColor")
-            .text("Growth World Population by Year"));
+            .text("Año"));
 
     svg.append("g")
         .attr("transform", `translate(${marginLeft},0)`)
-        .call(d3.axisLeft(y).ticks(null, "$.2f"))
+        .call(d3.axisLeft(y).ticks(null, ".2f"))
         .call(g => g.select(".domain").remove())
         .call(g => g.selectAll(".tick line").clone()
             .attr("x2", width)
@@ -93,7 +95,7 @@ function plotChart() {
             .attr("x", 4)
             .attr("text-anchor", "start")
             .attr("font-weight", "bold")
-            .text("Population"));
+            .text("Crecimiento Poblacional en cada año(millones)"));
 
     svg.append("path")
         .datum(plotChartData)
