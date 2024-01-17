@@ -1,0 +1,48 @@
+.main_page {
+    background-image: url("../assets/main_background_image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    padding-bottom: 4%;
+    padding-left: 4.6%;
+    padding-right: 5.8%;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.title {
+    width: 100%;
+}
+
+.main_page h1 {
+    margin: 0;
+    line-height: 70%;
+    font-size: 1450%;
+
+}
+
+.subtitle_main_page {
+    font-size: 60%;
+    font-weight: 400;
+}
+
+#title_image {
+    height: 7.5%;
+    animation-name: move_down;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes move_down {
+    0%, 20%, 100% {
+        transform: translate(0, 0);
+    }
+    52%, 68% {
+        transform: translate(0, 10px);
+    }
+    60% {
+        transform: translate(0, 8px);
+    }
+
+}

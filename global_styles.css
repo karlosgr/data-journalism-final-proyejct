@@ -1,0 +1,117 @@
+:root {
+}
+
+body {
+    margin: 0;
+}
+
+* {
+}
+
+img {
+    height: 100%;
+}
+
+.pages {
+    height: 102vh;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.large_page {
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.white_page {
+    background-color: #FDFDFF;
+}
+
+.red_page {
+    background-color: #FD0101;
+}
+
+.font_color_red {
+    color: #FD0101;
+}
+
+.font_color_white {
+    color: #FDFDFF;
+}
+
+.font_color_black {
+    color: black;
+}
+
+@font-face {
+    font-family: Gobold_Bold;
+    src: url("./assets/fonts/Gobold_Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: Gobold;
+    src: url("./assets/fonts/Gobold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: Gobold_Light;
+    src: url("./assets/fonts/Gobold_Light.ttf");
+}
+
+@font-face {
+    font-family: "Sinkin Sans";
+    src: url("./assets/fonts/SinkinSans-400Regular.ttf") format("truetype");
+}
+
+
+.sinkin {
+    font-family: "Sinkin Sans", serif;
+}
+
+.gobold {
+    font-family: Gobold, serif;
+}
+
+.gobold_b {
+    font-family: Gobold_Bold, serif;
+}
+
+.gobold_tl {
+    font-family: Gobold_Light, serif;
+    font-weight: lighter;
+}
+
+.regular_text {
+    font-size: 200%;
+    font-weight: 400;
+}
+
+.fixed {
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: -1;
+}
+
+
+#bubbleChartSvg {
+    width: 980px;
+    max-width: 100%;
+    height: auto;
+}
+
+#world_map_chart {
+    width: 60%;
+    height: 40%;
+}
+
+
+#animated_line_chart_continents {
+    width: 650px;
+    height: 450px;
+}

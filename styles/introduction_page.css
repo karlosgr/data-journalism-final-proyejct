@@ -1,0 +1,43 @@
+
+.introduction_page {
+    padding: 6% 6% 2% 5%;
+
+}
+
+.plot_chart_container {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.introduction_page h3 {
+    margin-top: 2%;
+    margin-bottom: 0;
+    top: 80%;
+    letter-spacing: -1.5px;
+    font-size: 250%;
+    font-weight: 450;
+}
+
+.year_range_plot_chart {
+    font-size: 130%;
+}
+
+.introduction_page_texts {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    text-align: end;
+    width: 40%;
+}
+
+.introduction_page_title {
+    font-size: 400%;
+    font-weight: 600;
+    margin: 0;
+}
+
+.introduction_page_texts .sinkin {
+    margin-left: 25%;
+}

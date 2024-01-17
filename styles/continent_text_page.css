@@ -1,0 +1,11 @@
+.continents_text_page {
+    padding: 4% 5%;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.continents_text_page .gobold_tl {
+    font-size: 550%;
+    margin: 0;
+    line-height: 130%;
+}

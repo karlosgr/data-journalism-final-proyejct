@@ -1,0 +1,32 @@
+
+.child_per_woman_page {
+    padding-top: 2%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.child_per_woman_page .gobold {
+    font-size: 1020%;
+    margin-bottom: 2%;
+}
+
+.child_per_woman_info {
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    width: 65%;
+    align-items: center;
+}
+
+.year_big {
+    margin: 0 2% 0 0;
+    font-size: 1750%;
+    letter-spacing: -4.6px;
+}
+
+.baby_bottle_div {
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}

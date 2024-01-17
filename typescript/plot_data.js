@@ -24,7 +24,6 @@ function getContinentByRegion(regionId) {
     return "";
 }
 const deleteDuplicatedRegionData = (regionData) => {
-    console.log(regionData);
     const filterContinentData = [];
     for (let i = 1960; i < 2022; i++) {
         for (const region in regions) {

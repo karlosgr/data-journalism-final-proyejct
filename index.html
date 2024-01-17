@@ -4,10 +4,20 @@
     <!--Config-->
     <meta charset="UTF-8">
     <title>Title</title>
+    <!--Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@latest/dist/echarts.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.js"></script>
 
-    <!--Style--->
-    <link href="styles.css" rel="stylesheet">
 
+    <!--Styles--->
+    <link href="global_styles.css" rel="stylesheet">
+    <link href="styles/main_page.css" rel="stylesheet">
+    <link href="styles/introduction_page.css" rel="stylesheet">
+    <link href="styles/global_ind_page.css" rel="stylesheet">
+    <link href="styles/amount_child_page.css" rel="stylesheet">
+    <link href="styles/continent_text_page.css" rel="stylesheet">
+    <link href="styles/world_map_page.css" rel="stylesheet">
 </head>
 <body>
 <div class="pages main_page white_page">
@@ -67,19 +77,44 @@
     </div>
 </div>
 
-<div class="pages child_per_woman_page red_page">
+<div class="scroll_container">
+    <div class="pages world_map_page white_page">
+        <div id="world_map_chart"></div>
+        <div class="world_map_info">
+            <p class="gobold font_color_red" id="map_year">
+                1960
+            </p>
+            <p class="gobold font_color_red world_map_title">COMPORTAMIENTO<br> ANUAL<br>
+                DE LA NATALIDAD<br> EN EL MUNDO</p>
+            <div class="world_map_legend">
+                <img alt="legend" src="assets/Group%2040%201.png">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pages red_page continents_text_page">
+    <p class="font_color_white gobold_tl">
+        A PESAR DE QUE EXISTE<br> UNA
+        <span class="gobold"> DISMINUCIÓN DE LA NATALIDAD<br> A NIVEL MUNDIAL,<br><span>NO</span> EN TODOS LOS CONTINENTES SE<br> COMPORTA DE LA MISMA MANERA</span>
+    </p>
+</div>
+
+<div class="large_page child_per_woman_page red_page">
     <p class="font_color_white gobold">
         CANTIDAD DE HIJOS POR MUJER
     </p>
-    <div>
-        <p class="year_big gobold_b"> 1960 </p>
-        <img alt="baby bottle" src="#">
-        <p class="sinkin"><span class="amount_child">5</span><br>HIJOS</p>
+    <div class="child_per_woman_info">
+        <p class="year_big gobold_b font_color_white"> 1960 </p>
+        <div class="baby_bottle_div">
+            <img alt="baby bottle" src="assets/1960.gif">
+        </div>
     </div>
-    <div>
-        <p class="year_big gobold_b"> 2022 </p>
-        <img alt="baby bottle" src="#">
-        <p class="sinkin"><span class="amount_child">2.3</span><br>HIJOS</p>
+    <div class="child_per_woman_info">
+        <p class="year_big gobold_b font_color_white"> 2022 </p>
+        <div class="baby_bottle_div">
+            <img alt="baby bottle" src="assets/2021.gif">
+        </div>
     </div>
 </div>
 
@@ -103,35 +138,21 @@
     </div>
 </div>
 
-<div class="pages red_page continents_text_page">
-    <p class="font_color_white gobold_tl">
-        A PESAR DE QUE EXISTE<br> UNA<span>DISMINUCIÓN DE LA NATALIDAD<br> A NIVEL MUNDIAL,<br><span>NO</span> EN TODOS LOS CONTINENTES SE<br> COMPORTA DE LA MISMA MANERA</span>
-    </p>
-</div>
-
 
 <!--<div id="bubble_chart"></div>-->
 <!--<div id="animated_line_chart_continents"></div>-->
-<!--<div id="world_map_chart"></div>-->
-
-
-<!--Scripts-->
-<!--Externals-->
-<script src="https://cdn.jsdelivr.net/npm/echarts@latest/dist/echarts.min.js"></script>
-<script src="https://d3js.org/d3.v5.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.js"></script>
 
 
 <!--Charts-->
 <script src="charts/animated_line_chart.js" type="module"></script>
 <script src="charts/plot_chart.js" type="module"></script>
-<!--<script src="./charts/world_map_chart.js" type="module"></script>-->
+<script src="./charts/world_map_chart.js" type="module"></script>
 <!--<script src="charts/bubble_chart.js" type="module"></s9cript>-->
 
-<!--Internals-->
+<!--Scripts-->
 <script src="javascript/chart_caller.js" type="module"></script>
-<!--<script src="./typescript/word_map_color.js" type="module"></script>-->
+<script src="./typescript/word_map_color.js" type="module"></script>
 <script src="typescript/get-country-data-by-year.js" type="module"></script>
-
+<script src="javascript/map_scroll.js" type="module"></script>
 </body>
 </html>

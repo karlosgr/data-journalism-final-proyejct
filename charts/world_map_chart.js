@@ -3,7 +3,11 @@ import {getCountryDataByYear} from "../typescript/get-country-data-by-year.js";
 import {getMapColor} from "../typescript/word_map_color.js";
 
 let mapData;
+const mapJson = await d3.json("../data/custom.geo.json");
 const worldMapChart = document.getElementById("world_map_chart");
+
+
+updateMapChart(1960);
 
 
 function _getCountryName(data, countryId) {
@@ -23,48 +27,39 @@ function _getCountryValue(data, countryId) {
     return 0;
 }
 
-
-export function plotMapChart(year) {
-    updateMapData(year);
-    _plot();
-}
-
-
 function updateMapData(year) {
     mapData = ((data, year) => {
         return getCountryDataByYear(data, year);
     })(buildData, year);
 }
 
+
 function _plot() {
     const scale = d3.geoMercator();
     const path = d3.geoPath().projection(scale);
-
     const svg = d3.create("svg")
         .attr("viewBox", [80, -100, 830, 580])
     ;
-
-    d3.json("../data/custom.geo.json").then(
-        (json) => {
-            json.features.forEach((feature) => {
-                svg.append("path").datum(feature)
-                    .attr("fill", () => {
-                        return getMapColor(_getCountryValue(mapData, feature.properties["adm0_a3_in"]));
-                    })
-                    .attr("stroke", "#ddd")
-                    .attr("d", path)
-                    .append("title")
-                    .text(`${_getCountryName(mapData, feature.properties["adm0_a3_in"])}\n 
-                       indicator: ${_getCountryValue(mapData, feature.properties["adm0_a3_in"])}`
-                    )
-                ;
+    mapJson.features.forEach((feature) => {
+        svg.append("path").datum(feature)
+            .attr("stroke", "#ddd")
+            .attr("fill", () => {
+                return getMapColor(_getCountryValue(mapData, feature.properties["adm0_a3_in"]));
             })
-            const g = svg.append("g")
-                .attr("fill", "none")
-                .attr("stroke", "black")
-            ;
-        }
-    );
-
+            .attr("d", path)
+            .append("title")
+            .text(`${_getCountryName(mapData, feature.properties["adm0_a3_in"])}\n 
+                      indicator: ${_getCountryValue(mapData, feature.properties["adm0_a3_in"])}`
+            )
+        ;
+    })
+    const g = svg.append("g").attr("fill", "none").attr("stroke", "black")
+    ;
     worldMapChart.appendChild(svg.node());
+}
+
+export function updateMapChart(year) {
+    updateMapData(year);
+    d3.select("#world_map_chart").selectAll("*").remove();
+    _plot();
 }

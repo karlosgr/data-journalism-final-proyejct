@@ -21,7 +21,6 @@ const purplePalette = [
     "rgb(53,3,79)",
 ];
 export function getMapColor(value) {
-    console.log(value);
     return value == 0 ? "rgb(255,255,255)" :
         (() => {
             return value > 0 ? redPalette[Math.round(value / 10) - 1] : purplePalette[Math.round(Math.abs(value) / 10)];
