@@ -3,7 +3,7 @@ import {getCountryDataByYear} from "../typescript/get-country-data-by-year.js";
 import {getMapColor} from "../typescript/word_map_color.js";
 
 let mapData;
-const mapJson = await d3.json("../data/custom.geo.json");
+const mapJson = await (await fetch("data/custom.geo.json")).json();
 const worldMapChart = document.getElementById("world_map_chart");
 
 
