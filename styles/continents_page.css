@@ -1,0 +1,45 @@
+.continents_page {
+    padding: 6% 4% 3% 6%;
+}
+
+.continent_page_texts {
+    padding-left: 5%;
+    width: 44%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+}
+
+.continent_page_texts .gobold {
+    margin: 0 6% 0 0;
+    letter-spacing: -5px;
+    font-size: 550%;
+
+}
+
+.continents_page_chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 4%;
+    width: 56%;
+
+}
+
+.continents_page_subtitle {
+    height: 35%;
+
+}
+
+.continents_page_subtitle .gobold {
+    margin: 0;
+    font-size: 550%;
+    text-align: end;
+    line-height: 116%;
+}
+
+#animated_line_chart_continents {
+    width: 100%;
+    height: 65%;
+}

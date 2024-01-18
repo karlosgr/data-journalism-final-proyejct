@@ -18,6 +18,9 @@
     <link href="styles/continent_text_page.css" rel="stylesheet">
     <link href="styles/world_map_page.css" rel="stylesheet">
     <link href="styles/causes_page.css" rel="stylesheet">
+    <link href="styles/continents_page.css" rel="stylesheet">
+    <link href="styles/causes_main_text.css" rel="stylesheet">
+    <link href="styles/conclusions_page.css" rel="stylesheet">
 </head>
 <body>
 <div class="pages main_page white_page">
@@ -64,8 +67,9 @@
             DISMINUYE
         </p>
         <p class="sinkin regular_text">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-            dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam
+            En los últimos años el avance de la sociedad ha permitido una mejor calidad de vida y por ende una menor
+            mortalidad, sin embargo algo esta causando que la natalidad también disminuya, y a un ritmo alarmante. Tanto
+            que cada vez hay menos diferencia entre ellas.
         </p>
     </div>
     <div class="ind_page_chart">
@@ -93,20 +97,108 @@
     </div>
 </div>
 
-<div class="pages red_page continents_text_page">
+<div class="large_page red_page continents_text_page">
     <p class="font_color_white gobold_tl">
         A PESAR DE QUE EXISTE<br> UNA
         <span class="gobold"> DISMINUCIÓN DE LA NATALIDAD<br> A NIVEL MUNDIAL,<br><span>NO</span> EN TODOS LOS CONTINENTES SE<br> COMPORTA DE LA MISMA MANERA</span>
     </p>
 </div>
 
-<div class="pages white_page continents_page">
-    
+<div class="large_page white_page continents_page">
+    <div class="continent_page_texts">
+        <p class="font_color_red gobold continents_page_title">
+            <span class="gobold_b">NO HAY</span><br> UNA SOLA REGIÓN<br> QUE NO LE AFECTE<br> ESTE FENÓMENO
+        </p>
+        <p class="sinkin regular_text" style="text-align: start;">
+            Incluso entre los diferentes continentes hay bastante contraste en cuanto a cifras de natalidad,
+            destácandose Europa y África como los extremos. Y hay una relacíon bastante aparente entre estas cifras y el
+            desarrollo económico y social de los continentes.
+        </p>
+    </div>
+    <div class="continents_page_chart">
+        <div id="animated_line_chart_continents"></div>
+        <div class="continents_page_subtitle">
+            <p class="gobold font_color_red">PERO...<br> QUE PODRIA ESTAR<br> CAUSANDO ESTO?</p>
+        </div>
+    </div>
 </div>
+
+<div class="scroll_container_causes">
+    <div class="pages causes_pages white_page">
+        <p class="gobold font_color_red">
+            CAUSAS DEL DECRECIMIENTO POBLACIONAL
+        </p>
+        <div class="causes_pages_content">
+            <div class="cause_element">
+                <div class="causes_gif">
+                    <img alt="condoms" src="assets/anticonceptivos.gif">
+                </div>
+                <p class="causes_text gobold_tl font_color_red"> MAYOR ACCESO A<br> EDUCACIÓN SEXUAL<br> Y MÉTODOS
+                    ANTICONCEPTIVOS</p>
+            </div>
+            <div class="cause_element">
+                <div class="causes_gif">
+                    <img alt="pork" src="assets/dinero.gif">
+                </div>
+                <p class="causes_text gobold_tl font_color_red">SITUACIÓN ECONÓMICA</p>
+            </div>
+            <div class="cause_element">
+                <div class="causes_gif">
+                    <img alt="" src="assets/cambios.gif">
+                </div>
+                <p class="causes_text gobold_tl font_color_red">CAMBIOS<br> POLÍTICOS Y<br>
+                    SOCIALES</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="pages"></div>
+
+    <div class="pages causes_text_pages row1">
+        <div class="causes_columns white_page">
+            <p class="sinkin regular_text">
+                Es verdad que una mayor asequibilidad de los anticonceptivos es un factor que provoca la disminución de
+                la natalidad. A pesar de eso, no es un factor negativo, al contrario, para las personas acceder a
+                anticonceptivos se vuelve igual de útil que el acceso a medicamentos de primera necesidad. Es una pena
+                que no sea así en todos los países. En los países poco desarrollados son productos caros menos al
+                alcance de la población promedio. Este es uno de los principales factores que provocan que la natalidad
+                sea mucho mas alta y descontrolada en las regiones mas pobres.
+            </p>
+        </div>
+    </div>
+
+    <div class="pages causes_text_pages row2">
+        <div class="causes_columns white_page">
+            <p class="sinkin regular_text">
+                El hecho de que muchas personas en todo el mundo apenas pueden permitirse mantenerse económicamente,
+                hace que la tarea de planificar un hijo cuando menos sea muy compleja, en los países poco desarrollados
+                combinado con la causa anterior provoca a veces una maternidad no deseada y mucho menos responsable
+                economicamente, sin embargo en los países desarrollados como hay una mejor planificación familiar
+                simplemente las personas deciden que no pueden permitirse tener hijos, por eso los países mas
+                desarrollados presentan bajos niveles de natalidad.
+            </p>
+        </div>
+    </div>
+
+    <div class="pages causes_text_pages row3">
+        <div class="causes_columns white_page">
+            <p class="sinkin regular_text">
+                Es innegable el cambio que ha tenido la sociedad recientemente con respecto a muchos temas sociales,y
+                aunque aún existen países donde el aborto es ilegal y la religión está bastante arraigada. El hecho de
+                que en los últimos años se hayan normalizado las relaciones no heteronormativas, que la esperanza de
+                vida y la salud hayan mejorado un poco, que con el feminismo la etiqueta que tenía la mujer de que su
+                papel era solo tener hijos y el cambio en la mentalidad colectiva. Yo creo que estos son algunos de los
+                factores que más han contribuido.
+            </p>
+        </div>
+    </div>
+
+</div>
+
 
 <div class="large_page child_per_woman_page red_page">
     <p class="font_color_white gobold">
-        CANTIDAD DE HIJOS POR MUJER
+        PROMEDIO DE NACIMIENTOS POR MUJER
     </p>
     <div class="child_per_woman_info">
         <p class="year_big gobold_b font_color_white"> 1960 </p>
@@ -122,37 +214,34 @@
     </div>
 </div>
 
-<div class="pages causes_pages white_page">
-    <p class="gobold font_color_red">
-        CAUSAS DEL DECRECIMIENTO POBLACIONAL
-    </p>
-    <div class="causes_pages_content">
-        <div class="cause_element">
-            <div class="causes_gif">
-                <img alt="condoms" src="assets/ANTICONCEPTIVOS.png">
-            </div>
-            <p class="causes_text gobold_tl font_color_red"> MAYOR ACCESO A<br> EDUCACIÓN SEXUAL<br> Y MÉTODOS
-                ANTICONCEPTIVOS</p>
-        </div>
-        <div class="cause_element">
-            <div class="causes_gif">
-                <img alt="pork" src="assets/DINERO.png">
-            </div>
-            <p class="causes_text gobold_tl font_color_red">SITUACIÓN ECONÓMICA</p>
-        </div>
-        <div class="cause_element">
-            <div class="causes_gif">
-                <img alt="" src="#">
-            </div>
-            <p class="causes_text gobold_tl font_color_red">MAYOR ACCESO A<br> EDUCACIÓN SEXUAL<br>
-                Y METODOS ANTICONCEPTIVOS</p>
-        </div>
+<div class="red_page pages conclusion_page">
+    <div class="conclusions">
+        <p class="gobold font_color_white">EN RESUMEN</p>
+
+        <p class="font_color_white sinkin regular_text">
+            Creo que ha sido interesante investigar sobre un tema que ha varios le resulta preocupante
+            y ver como una simple pasada a una serie de datos puede desvelarte parte del comportamiento de
+            la sociedad y algunos de sus problemas fundamentales, los cuales mucha gente ni si quiera piensa en su
+            día a día.En resumen:
+        </p>
+        <p class="font_color_white gobold_tl">Los anticonceptivos deberían ser insumos de primera necesidad</p>
     </div>
+
+    <div class="sources">
+        <p class="font_color_white gobold">FUENTES CONSULTADAS</p>
+
+        <p class="font_color_white sinkin">
+            -<a>https://datos.bancomundial.org/indicator/</a><br>
+            -<a>https://www.unfpa.org/es/swp2023/too-few</a><br>
+            -<a>https://www.un.org/development/desa/pd/data-landing-page</a><br>
+            -<a>https://echarts.apache.org/examples/en/index.html#chart-type-pie</a>
+        </p>
+    </div>
+
 </div>
 
 
 <!--<div id="bubble_chart"></div>-->
-<!--<div id="animated_line_chart_continents"></div>-->
 
 
 <!--Charts-->
@@ -162,9 +251,10 @@
 <!--<script src="charts/bubble_chart.js" type="module"></script>-->
 
 <!--Scripts-->
-<script src="javascript/chart_caller.js" type="module"></script>
+<script src="javascript/event_manager.js" type="module"></script>
 <script src="./typescript/word_map_color.js" type="module"></script>
 <script src="typescript/get-country-data-by-year.js" type="module"></script>
 <script src="javascript/map_scroll.js" type="module"></script>
+<script src="javascript/causes_scroll.js" type="module"></script>
 </body>
 </html>

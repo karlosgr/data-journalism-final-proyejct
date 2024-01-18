@@ -13,7 +13,7 @@ img {
 }
 
 .pages {
-    height: 102vh;
+    height: 103vh;
     width: 100%;
     display: flex;
     box-sizing: border-box;
@@ -21,10 +21,19 @@ img {
 
 .large_page {
     width: 100%;
-    height: 110vh;
+    height: 112vh;
     display: flex;
     box-sizing: border-box;
 }
+
+.scroll_container {
+    padding-top: 2%;
+    height: 300vh;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
 
 .white_page {
     background-color: #FDFDFF;
@@ -86,10 +95,18 @@ img {
 
 .regular_text {
     font-size: 200%;
-    font-weight: 400;
 }
 
 .fixed {
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: -2;
+}
+
+.fixed_causes {
     top: 0;
     right: 0;
     left: 0;
@@ -105,13 +122,3 @@ img {
     height: auto;
 }
 
-#world_map_chart {
-    width: 60%;
-    height: 40%;
-}
-
-
-#animated_line_chart_continents {
-    width: 650px;
-    height: 450px;
-}

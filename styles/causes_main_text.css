@@ -1,0 +1,42 @@
+.scroll_container_causes {
+    padding: 0;
+    height: 515vh;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.causes {
+    padding: 5% 5%;
+    flex-direction: column;
+}
+
+.causes_text_pages {
+    background-color: transparent;
+}
+
+.row1 {
+    justify-content: start;
+}
+
+.row2 {
+    justify-content: center;
+}
+
+.row3 {
+    justify-content: end;
+}
+
+
+.causes_columns {
+    padding: 5% 5%;
+    width: 25%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 70%;
+    line-height: 250%;
+}

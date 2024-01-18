@@ -7,8 +7,6 @@ const plotChartElement = document.getElementById('plot_chart');
 const length = (path) => d3.create("svg:path").attr("d", path).node().getTotalLength()
 
 
-plot();
-
 function fillData() {
     for (const data of worldDataByYears) {
         if (data.year !== 1960) {
@@ -31,7 +29,7 @@ function _pickSide(year) {
 }
 
 
-function plot() {
+export function plotPlotChart() {
     fillData();
     plotChartElement.append(plotChart());
 }
@@ -107,7 +105,7 @@ function plotChart() {
         .attr("stroke-dasharray", `0,${l}`)
         .attr("d", line)
         .transition()
-        .duration(5000)
+        .duration(8500)
         .ease(d3.easeLinear)
         .attr("stroke-dasharray", `${l},${l}`);
 
