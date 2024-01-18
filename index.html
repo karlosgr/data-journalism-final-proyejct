@@ -6,9 +6,8 @@
     <title>Title</title>
     <!--Scripts-->
     <script src="https://cdn.jsdelivr.net/npm/echarts@latest/dist/echarts.min.js"></script>
-    <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.js"></script>
-
+    <script src="https://d3js.org/d3.v7.min.js"></script>
 
     <!--Styles--->
     <link href="global_styles.css" rel="stylesheet">
@@ -18,6 +17,7 @@
     <link href="styles/amount_child_page.css" rel="stylesheet">
     <link href="styles/continent_text_page.css" rel="stylesheet">
     <link href="styles/world_map_page.css" rel="stylesheet">
+    <link href="styles/causes_page.css" rel="stylesheet">
 </head>
 <body>
 <div class="pages main_page white_page">
@@ -100,6 +100,10 @@
     </p>
 </div>
 
+<div class="pages white_page continents_page">
+    
+</div>
+
 <div class="large_page child_per_woman_page red_page">
     <p class="font_color_white gobold">
         CANTIDAD DE HIJOS POR MUJER
@@ -119,21 +123,29 @@
 </div>
 
 <div class="pages causes_pages white_page">
-    <p>
+    <p class="gobold font_color_red">
         CAUSAS DEL DECRECIMIENTO POBLACIONAL
     </p>
     <div class="causes_pages_content">
-        <div>
-            <img alt="condoms" src="#">
-            <p> MAYOR ACCESO A<br> EDUCACIÓN SEXUAL<br> Y MÉTODOS ANTICONCEPTIVOS</p>
+        <div class="cause_element">
+            <div class="causes_gif">
+                <img alt="condoms" src="assets/ANTICONCEPTIVOS.png">
+            </div>
+            <p class="causes_text gobold_tl font_color_red"> MAYOR ACCESO A<br> EDUCACIÓN SEXUAL<br> Y MÉTODOS
+                ANTICONCEPTIVOS</p>
         </div>
-        <div>
-            <img alt="pork" src="#">
-            <p>SITUACIÓN ECONÓMICA</p>
+        <div class="cause_element">
+            <div class="causes_gif">
+                <img alt="pork" src="assets/DINERO.png">
+            </div>
+            <p class="causes_text gobold_tl font_color_red">SITUACIÓN ECONÓMICA</p>
         </div>
-        <div>
-            <img alt="" src="#">
-            <p>MAYOR ACCESO A<br> EDUCACIÓN SEXUAL<br> Y METODOS ANTICONCEPTIVOS</p>
+        <div class="cause_element">
+            <div class="causes_gif">
+                <img alt="" src="#">
+            </div>
+            <p class="causes_text gobold_tl font_color_red">MAYOR ACCESO A<br> EDUCACIÓN SEXUAL<br>
+                Y METODOS ANTICONCEPTIVOS</p>
         </div>
     </div>
 </div>
@@ -147,7 +159,7 @@
 <script src="charts/animated_line_chart.js" type="module"></script>
 <script src="charts/plot_chart.js" type="module"></script>
 <script src="./charts/world_map_chart.js" type="module"></script>
-<!--<script src="charts/bubble_chart.js" type="module"></s9cript>-->
+<!--<script src="charts/bubble_chart.js" type="module"></script>-->
 
 <!--Scripts-->
 <script src="javascript/chart_caller.js" type="module"></script>

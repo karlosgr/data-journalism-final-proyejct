@@ -1,0 +1,39 @@
+.causes_pages {
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 4% 2% 4%;
+}
+
+.causes_pages .gobold {
+    margin: 0;
+    font-size: 600%;
+    letter-spacing: -4px;
+}
+
+.causes_pages_content {
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cause_element {
+    margin: 4% 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 30%;
+}
+
+.causes_text {
+    font-size: 250%;
+    text-align: center;
+}
+
+.causes_gif {
+    display: flex;
+    width: 100%;
+    margin: 0 1%;
+    justify-content: center;
+    height: 60%;
+}
